@@ -1,28 +1,57 @@
-MovieMatch 250
+# MovieMatch 250 — Personality-Based Film Recommendation App
 
-A Python-based personality quiz that recommends 5 movies from IMDb's Top 250 list based on your answers.
+## About the Project
 
-How it works
+MovieMatch 250 is a Python-based quiz app that recommends films based on the user’s personality.
+It uses a database of the IMDb Top 250 movies and matches user preferences by analyzing their answers to 10 creative, non-technical questions.
 
-Loads a list of 250 top-rated films from an Excel file
-Asks 10 creative questions to understand your movie personality
-Scores each movie based on keyword matches with your answers
-Suggests your top 5 matching movies
-Technologies Used
+The app is entirely terminal-based and lightweight, built with Python and pandas.
 
-Python 3
-pandas
-openpyxl
-How to Run
+## Key Features
+
+Data Analysis:
+
+* Reads and cleans raw Excel data with pandas
+* Filters and scores movies based on quiz answers
+* Ranks and returns the 5 best-matched films
+
+Quiz System:
+
+* Asks 10 engaging questions to understand the user's mood, interests, and vibe
+* Each answer contributes to a preference profile used in movie scoring
+
+Recommendation Logic:
+
+* Title-based scoring system
+* Uses keywords and concepts to match films to user profiles
+* No ML or API dependency — fully self-contained
+
+## Installation
+
+Prerequisites:
+
+* Python 3.8 or higher
+* pip (Python package installer)
 
 Install required libraries:
-pip install -r requirements.txt
-Run the app in Terminal:
-python3 main.py
-Project Structure
 
-main.py — Runs the app
-questions.py — Quiz logic
-imdb_top_250.xlsx — Source movie data
-requirements.txt — Python libraries needed
-README.md — Project overview and instructions
+```bash
+pip install -r requirements.txt
+```
+
+Run the app:
+
+```bash
+python3 main.py
+```
+
+## Project Structure
+
+| File                | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| main.py             | Runs the full app: loads data, calls the quiz, scores movies |
+| questions.py        | Contains all 10 questions and returns user answers           |
+| imdb\_top\_250.xlsx | Excel sheet of 250 movies                                    |
+| requirements.txt    | Contains Python library dependencies                         |
+| README.md           | This documentation file                                      |
+
